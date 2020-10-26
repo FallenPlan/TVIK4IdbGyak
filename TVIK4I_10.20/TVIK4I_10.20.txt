@@ -1,2 +1,0 @@
-create table GYARTO (adoszam int, nev char(30), telephely char, primary key (adoszam));
-create table TERMEK (tkod int, nev varchar(50), ear number(N,0), gyarto int, primary key (tkod), foreign key (gyarto) references GYARTO(adoszam))

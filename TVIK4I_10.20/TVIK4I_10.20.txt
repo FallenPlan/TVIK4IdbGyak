@@ -1,0 +1,3 @@
+create table egysegek (aru int(50), db int(40));
+create table komponens (termek int(50), alkatresz int(50));
+create table alkatresz (akod int(50), nev char(50), primary key (akod));

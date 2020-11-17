@@ -1,0 +1,11 @@
+1.
+create table gyarto (adoszam int, nev char(30), telephely, irsz char(4), varos char(40), utca(100), primary key (adoszam));
+create table termek (tkod int, nev char(50), ear int(10), gyarto int, primary key (tkod), foreign key (gyarto) references gyarto (adoszam));
+create table egysegek (aru int, db int(db > 0);
+create table komponens (termek int, alkatresz int, foreign key (termek) references termek (tkod), foreign key (alkatresz) references alkatresz (akod));
+create table alkatresz (akod int, nev char(50), primary key (akod));
+
+2.
+create table tanfolyam (tkod int, ar int(ar > 0), megnevezes char(50), tipus char(1), primary key (tkod));
+create table befizetes (kurzus int, diak bit, befizetes int);
+create table resztvevo (tajszam char(12), nev char(50), lakcim char(100), primary key (tajszam));

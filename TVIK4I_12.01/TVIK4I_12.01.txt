@@ -1,0 +1,32 @@
+1.
+A->B
+B->B
+AB->B
+
+2.
+R(A,:B,C)
+AB->B
+AC->B
+A->B
+B->B
+BC->B
+A->BC
+
+3.
+Ha A->B, akkor AC->B
+Biz.: A->BC és BC->B, akkor A->B
+
+4.
+R(A,B,C,D)
+C->D, B->DC, AC->C, A->B
+
+6.
+RENDELÉSEK (
+dátum DATE,
+vevő_kód VARCHAR2(50),
+vevő_név VARCHAR2(100),
+termék_neve VARCHAR2(50),
+egységár INT,
+összár INT
+);
+

@@ -1,0 +1,11 @@
+INSERT INTO Vevo VALUES (’532400RT’, ’Csomor Bence Patrik’, 762901628352836091628362, ’Budapest’, ’Tigris utca’, 8, 1188);
+SELECT Nev FROM Extrak GROUP BY Nev;
+UPDATE Vevo SET Utca=’Tégla utca’, Hazszam=’69’ WHERE Nev=’Káposz Tamás’;
+SELECT SzemIgSz, Nev FROM Vevo WHERE SzemIgSz LIKE ’%4%’ AND SzemIgSz LIKE ’%5%’;
+UPDATE Auto SET VSZ=’532400RT’ WHERE Tipus=’Aston Martin Virage’;
+SELECT * FROM Auto WHERE Ar<’8000000’;
+SELECT AID, COUNT(*) FROM AAkapcsolotabla GROUP BY AID;
+SELECT Nev, Rendszam FROM Auto INNER JOIN Vevo ON Auto.VSZ=Vevo.SzemIgSz WHERE Varos=’Budapest’;
+SELECT Nev FROM Kiegeszito WHERE Ar BETWEEN 2000 AND 5000;
+SELECT Tipus FROM Auto WHERE Auto.VSZ IS NULL;
+SELECT Auto.Tipus FROM Auto RIGHT OUTER JOIN AAkapcsolotabla ON Auto.Alvazszam=AAkapcsolotabla.AA WHERE AAkapcsolotabla.AID =’12’;

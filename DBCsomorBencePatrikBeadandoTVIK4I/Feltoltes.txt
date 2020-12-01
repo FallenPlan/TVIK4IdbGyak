@@ -1,0 +1,61 @@
+insert into Auto values (’AK152M538DRT3528A’, 2500000, ’BMW 520’, 1995, ’asd123’, default);
+insert into Auto values (’F4784KVO56T532H34’, 2850000, ’Fiat Punto’, 2013, ’fnz476’, default);
+insert into Auto values (’RKT735P38674RQ78M’, 32000000, ’Audi A8’, 2013, ’pbt592’, default);
+insert into Auto values (’LPMI873M287HB98O3’, 78000000, ’Aston Martin Virage’, 2016, ’rma274’, default);
+insert into Auto values (’C910VYO52MG34CR56’, 8000000, ’Ford Focus’, 2018, ’vgz444’, default);
+insert into Auto values (’HKU73927CZD647ND4’, 4500000, ’Ford Kuga’, 2015, ’crd432’, default);
+insert into Auto values (’CUSD276EK8D6FN5KR’, 6500000, ’Honda Civic’, 2013, ’ptb587’, default);
+insert into Auto values (’Z7XHS76DG4KFI8ENF’, 10000000, ’MAN TGE’, 2005, ’xwe210’, default);
+
+insert into Vevo values (’123456AB’, ’Fekete Tamás’, 123456781234567812345678, ’Budapest’, ’Alma utca’, 23, 1234);
+insert into Vevo values (’231058RT’, ’Kiss József’, 863917063729172639163827, ’Budapest’, ’Jáde utca’, 12, 1342);
+insert into Vevo values (’862710DF’, ’Dil Emma’, 719260834628190736251827, ’Miskolc’, ’Szőlő utca’, 8, 1645);
+insert into Vevo values (’748296HB’, ’Paradi Csoma’, 649081528342891842819364, ’Debrecen’, ’Róka utca’, 33, 1065);
+insert into Vevo values (’186073RV’, ’Káposz Tamás’, 591835081407352957243845, ’Eger’, ’Eper utca’, 101, 1687);
+
+insert into Kiegeszito values (’1’, ’telefontartó’, 1500, ’Igen’, ’Nem’);
+insert into Kiegeszito values (’2’, ’pohártartó’, 3000, ’Igen’, ’Nem’);
+insert into Kiegeszito values (’3’, ’ventilátor’, 4500, ’Igen’, ’Nem’);
+insert into Kiegeszito values (’4’, ’napszemüveg’, 2500, ’Nem’, ’Igen’);
+insert into Kiegeszito values (’5’, ’kesztyű’, 6000, ’Nem’, ’Igen’);
+
+insert into VKkapcsolotabla values (’2020.11.12.’, 2, ’2’, ’123456AB’);
+insert into VKkapcsolotabla values (’2020.11.13.’, 1, ’1’, ’123456AB’);
+insert into VKkapcsolotabla values (’2020.11.21.’, 3, ’4’, ’231058RT’);
+insert into VKkapcsolotabla values (’2020.11.15.’, 1, ’3’, ’862710DF’);
+insert into VKkapcsolotabla values (’2020.11.21.’, 2, ’5’, ’748296HB’);
+
+insert into Autoszalon values (’11’, ’Budapest’, ’Arató utca’, 34, 1233);
+insert into Autoszalon values (’12’, ’Miskolc’, ’Erdő utca’, 201, 1312);
+
+insert into AAkapcsolotabla values (’LPMI873M287HB98O3’, ’12’);
+insert into AAkapcsolotabla values (’AK152M538DRT3528A’, ’11’);
+insert into AAkapcsolotabla values (’F4784KVO56T532H34’, ’11’);
+insert into AAkapcsolotabla values (’RKT735P38674RQ78M’, ’12’);
+insert into AAkapcsolotabla values (’C910VYO52MG34CR56’, ’12’);
+
+insert into Extrak values (’101’, ’ülésfűtés’, 150000);
+insert into Extrak values (’102’, ’tolatókamera’, 400000);
+insert into Extrak values (’103’, ’multikormány’, 80000);
+insert into Extrak values (’104’, ’adaptív tempomat’, 200000);
+insert into Extrak values (’105’, ’bluetooth’, 60000);
+
+insert into Tulaj values (’T1’, ’Boss Enikő’);
+insert into Tulaj values (’T2’, ’Boss Miklós’);
+insert into Tulaj values (’T3’, ’Főnök Ferenc’);
+
+insert into AEkapcsolotabla values (’LPMI873M287HB98O3’, ’104’);
+insert into AEkapcsolotabla values (’AK152M538DRT3528A’, ’101’);
+insert into AEkapcsolotabla values (’F4784KVO56T532H34’, ’102’);
+insert into AEkapcsolotabla values (’RKT735P38674RQ78M’, ’105’);
+insert into AEkapcsolotabla values (’C910VYO52MG34CR56’, ’105’);
+
+insert into TAkapcsolotabla values (’12’, ’T1’);
+insert into TAkapcsolotabla values (’11’, ’T3’);
+insert into TAkapcsolotabla values (’12’, ’T2’);
+
+insert into KAkapcsolotabla values (’2’, ’11’);
+insert into KAkapcsolotabla values (’5’, ’12’);
+insert into KAkapcsolotabla values (’3’, ’12’);
+insert into KAkapcsolotabla values (’2’, ’11’);
+insert into KAkapcsolotabla values (’1’, ’12’);

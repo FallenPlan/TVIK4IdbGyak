@@ -1,0 +1,87 @@
+Create table Auto (
+Alvazszam char(17) Primary Key,
+Ar int(10) Not Null,
+Tipus varchar(25),
+GyartasiEv int(4),
+Rendszam char(6)
+);
+
+Create table Kiegeszito (
+ID varchar(20) Primary Key,
+Nev varchar(25) Not Null,
+Ar int(10) Not Null,
+Szallitas char(9),
+SzemAtvet char(16)
+);
+
+Create table Extrak (
+ID varchar(20) Primary Key,
+Nev varchar(25) Not Null,
+Ar int(10) Not Null
+);
+
+Create table Tulaj (
+Kod varchar(20) Primary Key,
+Nev varchar(25) Not Null
+);
+
+Create table Vevo (
+SzemIgSz varchar(8) Primary Key,
+Nev varchar(25) Not Null,
+BankszSz varchar(24) Not Null,
+Varos varchar(20),
+Utca varchar(20),
+Hazszam int(4),
+IrSzam int(4)
+);
+
+Create table Autoszalon (
+ID varchar(20) Primary Key,
+Varos varchar(20),
+Utca varchar(20),
+Hazszam int(4),
+IrSzam int(4)
+);
+
+Create table VKkapcsolotabla (
+EladDatum varchar(15),
+dbSzam int(10) Not Null,
+KID varchar(20),
+VSZ varchar(8),
+Foreign Key(KID) References Kiegeszito(ID),
+Foreign Key(VSZ) References Vevo(SzemIgSz)
+);
+
+Create table AAkapcsolotabla (
+AA char(17),
+AID varchar(20),
+Foreign Key(AA) References Auto(Alvazszam),
+Foreign Key(AID) References Autoszalon(ID)
+);
+
+Create table AEkapcsolotabla (
+AA char(17),
+EID varchar(20),
+Foreign Key(AA) References Auto(Alvazszam),
+Foreign Key(EID) References Extrak(ID)
+);
+
+Create table KAkapcsolotabla (
+KID varchar(20),
+AID varchar(20),
+Foreign Key(KID) References Kiegeszito(ID),
+Foreign Key(AID) References Autoszalon(ID)
+);
+
+Create table TAkapcsolotabla (
+AID varchar(20),
+TKod varchar(20),
+Foreign Key(AID) References Autoszalon(ID),
+Foreign Key(TKod) References Tulaj(Kod)
+);
+
+ALTER TABLE Auto
+ADD VSZ varchar(8);
+
+ALTER TABLE Auto
+ADD FOREIGN KEY (VSZ) REFERENCES Vevo(SzemIgSz);

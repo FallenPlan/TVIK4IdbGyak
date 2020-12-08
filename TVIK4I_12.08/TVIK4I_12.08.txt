@@ -1,0 +1,12 @@
+1.
+
+Az SQL-t használó alkalmazások előfordítót igényel az SQL utasítások kódokká alakításához. Összeállítják a kódot és az adatbázishoz kötve feldolgozzák. 
+Ezzel szemben a CLI alkalmazás ne migényel előzetes fordítást.
+
+2.
+
+sqlite-amalgamation csomag letöltése
+- sqlite3.h és sqlite3.c kiemelése
+projektet módosítani kell:
+- sqlite3.h elérése
+- sqlite3.c forráskódok közé beolvasni
